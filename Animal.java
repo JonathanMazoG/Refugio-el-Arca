@@ -16,7 +16,8 @@ public class Animal {
     }
 
     public void setId(int id) {
-        this.id = id;
+        this.id = i
+        ;
     }
 
     public String getName() {
