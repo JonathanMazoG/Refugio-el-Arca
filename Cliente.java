@@ -1,14 +1,16 @@
-public class Animal {
+public class Cliente {
 
     private int id;
     private String name;
+    private int age;
 
-    public Animal() {
+    public Cliente() {
     }
 
-    public Animal(int id, String name) {
+    public Cliente(int id, String name, int age) {
         this.id = id;
         this.name = name;
+        this.age = age;
     }
 
     public int getId() {
@@ -28,8 +30,16 @@ public class Animal {
         this.name = name;
     }
 
+     public int getAge() {
+        return age;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     @Override
     public String toString() {
-        return "Animal{" + "id=" + id + ", name='" + name + '\'' + '}';
+        return "Cliente{" + "id=" + id + ", name='" + name +  ", age='" + age + '\'' + '}';
     }
 }
