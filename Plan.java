@@ -47,10 +47,9 @@ public class Plan {
     public void setPrecio(double precio) {
         this.precio = precio;
     }
-
     @Override
     public String toString() {
-        return "Plan{" + "description=" + description + ", numberOfSlots='" + numberOfSlots + ", tipoAnimal='" + tipoAnimal  '\'' + '}';
+        return "Plan{" + "description=" + description + ", numberOfSlots='" + numberOfSlots + ", tipoAnimal='" + tipoAnimal  +'\'' + '}';
     }
 
     
