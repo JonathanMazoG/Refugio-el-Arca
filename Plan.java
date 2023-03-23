@@ -2,16 +2,16 @@ public class Plan {
 
     private int numberOfSlots;
     private String description;
-    private Animal animal;
+    private String nameAnimal;
 
     public Plan() {
     }
 
-    public Plan(int numberOfSlots, String description , Animal animal) {
+    public Plan(int numberOfSlots, String description , String name ) {
         this.numberOfSlots = numberOfSlots;
         this.description = description;
-        this.animal = animal  // tengo dudas si esto se hace asi o no
-    }
+        this.nameAnimal = nameAnimal;
+     }
 
     public int getNumberOfSlots() {
         return numberOfSlots;
@@ -30,8 +30,16 @@ public class Plan {
         this.description = description ;
     }
 
+    public String getNameAnimal() {
+        return nameAnimal;
+    }
+
+    public void setNameAnimal(String nameAnimal) {
+        this.nameAnimal = nameAnimal ;
+    }
+
     @Override
     public String toString() {
-        return "Plan{" + "description=" + description + ", numberOfSlots='" + numberOfSlots + '\'' + '}';
+        return "Plan{" + "description=" + description + ", numberOfSlots='" + numberOfSlots + ", nameAnimal='" + nameAnimal  '\'' + '}';
     }
 }
