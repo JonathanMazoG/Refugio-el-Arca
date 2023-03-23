@@ -3,7 +3,7 @@ public class Plan {
     private int numberOfSlots;
     private String description;
     private String nameAnimal;
-
+   
     public Plan() {
     }
 
