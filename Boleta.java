@@ -1,6 +1,6 @@
-import java.util.list;
+import java.util.*;
 
 public class Boleta{
-    list <Mamifero> mamiferos;
+    private Animal[] animales;
     
 }
