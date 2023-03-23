@@ -4,12 +4,15 @@ public class Cliente {
     private String name;
     private int age;
     private String tipo;
+    private int numVisitas;
 
-    public Cliente(int id, String name, int age, String tipo) {
+    
+    public Cliente(int id, String name, int age, String tipo, int numVisitas) {
         this.id = id;
         this.name = name;
         this.age = age;
         this.tipo = tipo;
+        this.numVisitas = numVisitas;
     }
     public Cliente() {
     }
@@ -46,8 +49,15 @@ public class Cliente {
         this.tipo = tipo;
     }
 
+    public int getNumVisitas() {
+        return numVisitas;
+    }
+    public void setNumVisitas(int numVisitas) {
+        this.numVisitas = numVisitas;
+    }
     @Override
     public String toString() {
         return "Cliente{" + "id=" + id + ", name='" + name +  ", age='" + age + '\'' + '}';
     }
+   
 }
