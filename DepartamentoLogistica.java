@@ -1,8 +1,8 @@
 public class DepartamentoLogistica {
 
     public static void ingresarAnimalSalvaje() {
-        AnimalSalvaje animalSalvaje = new AnimalSalvaje(1, "Lorenzo", "1"); //Leer info por teclado
-        System.out.println("Bienvenido " + animalSalvaje.toString());
+        //Leer info por teclado
+       
     }
 
     public static void admonZoo(){

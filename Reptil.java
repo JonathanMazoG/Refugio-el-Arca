@@ -15,7 +15,7 @@ public class Reptil extends Animal {
     }
 
     public void setClassification(String classification) {
-        this.uso = classification;
+        this.classification = classification;
     }
 
     @Override
