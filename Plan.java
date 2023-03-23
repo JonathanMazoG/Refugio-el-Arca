@@ -2,16 +2,18 @@ public class Plan {
 
     private int numberOfSlots;
     private String description;
-    private String nameAnimal;
+    private String tipoAnimal;
+    private double precio;
    
-    public Plan() {
-    }
-
-    public Plan(int numberOfSlots, String description , String name ) {
+    public Plan(int numberOfSlots, String description, String tipoAnimal, double precio) {
         this.numberOfSlots = numberOfSlots;
         this.description = description;
-        this.nameAnimal = nameAnimal;
-     }
+        this.tipoAnimal = tipoAnimal;
+        this.precio = precio;
+    }
+    
+    public Plan() {
+    }
 
     public int getNumberOfSlots() {
         return numberOfSlots;
@@ -30,16 +32,26 @@ public class Plan {
         this.description = description ;
     }
 
-    public String getNameAnimal() {
-        return nameAnimal;
+    public String gettipoAnimal() {
+        return tipoAnimal;
     }
 
-    public void setNameAnimal(String nameAnimal) {
-        this.nameAnimal = nameAnimal ;
+    public void settipoAnimal(String tipoAnimal) {
+        this.tipoAnimal = tipoAnimal ;
+    }
+
+    public double getPrecio() {
+        return precio;
+    }
+
+    public void setPrecio(double precio) {
+        this.precio = precio;
     }
 
     @Override
     public String toString() {
-        return "Plan{" + "description=" + description + ", numberOfSlots='" + numberOfSlots + ", nameAnimal='" + nameAnimal  '\'' + '}';
+        return "Plan{" + "description=" + description + ", numberOfSlots='" + numberOfSlots + ", tipoAnimal='" + tipoAnimal  '\'' + '}';
     }
+
+    
 }

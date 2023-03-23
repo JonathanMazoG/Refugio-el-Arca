@@ -1,26 +1,26 @@
 public class Ave extends Animal {
 
-    private String type;
+    private String classification;
 
     public Ave() {
     }
 
-    public Ave(int id, String name, String type) {
+    public Ave(int id, String name, String classification) {
         super(id, name);
-        this.type = type;
+        this.classification = classification;
     }
 
-    public String getType() {
-        return type;
+    public String getclassification() {
+        return classification;
     }
 
-    public void setType(String type) {
-        this.type = type;
+    public void setclassification(String classification) {
+        this.classification = classification;
     }
 
     @Override
     public String toString() {
-        return "Ave{" + "type='" + type + '\'' + '}';
+        return "Ave{" + "classification='" + classification + '\'' + '}';
     }
 
 

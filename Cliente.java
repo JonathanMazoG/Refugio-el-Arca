@@ -3,16 +3,16 @@ public class Cliente {
     private int id;
     private String name;
     private int age;
+    private String tipo;
 
-    public Cliente() {
-    }
-
-    public Cliente(int id, String name, int age) {
+    public Cliente(int id, String name, int age, String tipo) {
         this.id = id;
         this.name = name;
         this.age = age;
+        this.tipo = tipo;
     }
-
+    public Cliente() {
+    }
     public int getId() {
         return id;
     }
@@ -36,6 +36,14 @@ public class Cliente {
 
     public void setAge(int age) {
         this.age = age;
+    }
+
+    public String getTipo() {
+        return tipo;
+    }
+
+    public void setTipo(String tipo) {
+        this.tipo = tipo;
     }
 
     @Override

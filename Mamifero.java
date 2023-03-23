@@ -1,26 +1,26 @@
 public class Mamifero extends Animal {
 
-    private String group;
+    private String classification;
 
     public Mamifero() {
     }
 
-    public Mamifero (int id, String name, String group) {
+    public Mamifero (int id, String name, String classification) {
         super(id, name);
-        this.group = group ;
+        this.classification = classification ;
     }
 
-    public String getGroup() {
-        return group;
+    public String getclassification() {
+        return classification;
     }
 
-    public void setGroup(String group) {
-        this.group = group;
+    public void setclassification(String classification) {
+        this.classification = classification;
     }
 
     @Override
     public String toString() {
-        return "Mamifero{" + "group='" + group + '\'' + '}';
+        return "Mamifero{" + "classification='" + classification + '\'' + '}';
     }
 
 
