@@ -13,6 +13,11 @@ import com.itextpdf.layout.element.Cell;
 import com.itextpdf.layout.element.Table;
 
 public class ReporteDeVentas {
+
+    Document document;
+    Table table;
+    Table table2;
+
     public static void CrearPdf()throws Exception {
         String destiny = "informe de ventas el Arca.pdf";       
         PdfWriter writer = new PdfWriter(destiny);
@@ -31,21 +36,53 @@ public class ReporteDeVentas {
     public static void Encabezados(){  
          String texto = "Refugio de Animales el Arca";
             Paragraph paragraph = new Paragraph(texto);
-            documento.add(paragraph);
+            document.add(paragraph);
 
          String texto1 = "Valle de San Nicolas Rionegro Antioquia Colombia";
             Paragraph paragraph = new Paragraph(texto1);
-            documento.add(paragraph);
+            document.add(paragraph);
 
              String texto2 = "Pueden escribirnos al correo jonathan.mazog@udea.edu.co o tambien a asirley.hoyos@udea.edu.co ";
             Paragraph paragraph = new Paragraph(texto2);
-            documento.add(paragraph);
+            document.add(paragraph);
     }
 
+    public static void InsertarTabla (){
+      //primera tabla
+     float [] pointColumnWidths1 = {150f, 150f, 150f, 150f, 150f, 150f};       
+      Table table = new Table(pointColumnWidths1);                             
+            
+      Cell cell1 = new Cell();       
+      cell1.add("Plan");       
+      table.addCell(cell1);             
+      
+      Cell cell2 = new Cell();       
+      cell2.add("Valor");       
+      table.addCell(cell2); 
+      
+      Cell cell3 = new Cell();       
+      cell3.add("Cantidad");       
+      table.addCell(cell3);             
+      
+      Cell cell4 = new Cell();       
+      cell4.add("Valor venta");       
+      table.addCell(cell4);        
+      
+      Cell cell5 = new Cell();       
+      cell5.add("Descuentos");       
+      table.addCell(cell5);             
+      
+      Cell cell6 = new Cell();       
+      cell6.add("Total");       
+      table.addCell(cell6);                  
+                                   
+       
+    }
+  }
          
 
       
       
 
-    }
-}
+    
+
