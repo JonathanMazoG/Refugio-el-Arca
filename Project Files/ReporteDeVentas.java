@@ -68,16 +68,27 @@ public class ReporteDeVentas {
       cell4.add("Valor venta");       
       table.addCell(cell4);        
       
-      Cell cell5 = new Cell();       
-      cell5.add("Descuentos");       
-      table.addCell(cell5);             
+      // tabla anidada
+      float [] pointColumnWidths2 = {150f, 150f};       
+      Table table2 = new Table(pointColumnWidths2); 
+
+      Cell cellt2_1 = new Cell();       
+      cellt2_1.add("porcentaje Descuento");       
+      table2.addCell(cellt2_1);
       
-      Cell cell6 = new Cell();       
+      Cell cellt2_2 = new Cell();       
+      cellt2_2.add ("Valor Descuento");     
+      table2.addCell(cellt2_2); 
+
+     Cell cell5 = new Cell();       
+      cell5.add(table2);       
+      table.addCell(cell5); 
+      
+     Cell cell6 = new Cell();       
       cell6.add("Total");       
-      table.addCell(cell6);                  
-                                   
-       
+      table.addCell(cell6);
     }
+
   }
          
 
