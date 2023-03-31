@@ -1,22 +1,9 @@
 import java.util.ArrayList;
 
 
-public class Administracion {
-    private ArrayList<Cliente> clientes;
-    private ArrayList<Plan> planes;
-    private ArrayList<Boleta> boletas;
-    private ArrayList<Animal> animales;
+public class Administracion{  
 
-
-    public Administracion(ArrayList<Cliente> clientes, ArrayList<Plan> planes, ArrayList<Boleta> boletas,
-            ArrayList<Animal> animales) {
-        this.clientes = clientes;
-        this.planes = planes;
-        this.boletas = boletas;
-        this.animales = animales;
-    }
-
-    public Administracion() {
+  public Administracion() {
     }
 
     public ArrayList<Cliente> ingresoCliente(Cliente cliente,ArrayList<Cliente> clientes){
@@ -27,6 +14,7 @@ public class Administracion {
         clientes.add(cliente);
         return clientes;
     }
+
 
     public ArrayList<Animal> ingresoAnimal(Animal animal,ArrayList<Animal> animales){
         animales.add(animal);
@@ -41,6 +29,22 @@ public class Administracion {
         planes.add(plan);
         return planes;
     }
+
+    public ArrayList<Suministro> ingresoSuministro(Suministro suministro,ArrayList<Suministro> suministros){
+        suministros.add(suministro);
+        return suministros ;
+    }
+
+    public ArrayList<ReporteDeVentas> ingresoinforme(ReporteDeVentas reporteDeVentas,ArrayList<ReporteDeVentas> reportesDeVentas){
+        reportesDeVentas.add(reporteDeVentas);
+        return reportesDeVentas;
+    }
     
-    
+    public String liberacionAnimal(Animal animal){
+        String mensaje = "";
+       if(animal.getStage().equals("rehabilitado")){
+        mensaje = "el animal está listo para ser liberado en su habitad natural";
+      }
+      return mensaje;
+    }
 }
