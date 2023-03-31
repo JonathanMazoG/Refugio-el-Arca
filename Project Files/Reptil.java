@@ -5,10 +5,17 @@ public class Reptil extends Animal {
     public Reptil() {
     }
 
-    public Reptil(int id, String name, String classification) {
-        super(id, name);
+  
+    public Reptil(int id, String name, String stage, String classification) {
+        super(id, name, stage);
         this.classification = classification;
     }
+
+
+    public Reptil(String classification) {
+        this.classification = classification;
+    }
+
 
     public String getClassification() {
         return classification;

@@ -5,10 +5,17 @@ public class Pez extends Animal {
     public Pez() {
     }
 
-    public Pez(int id, String name, String classification) {
-        super(id, name);
+  
+    public Pez(int id, String name, String stage, String classification) {
+        super(id, name, stage);
         this.classification = classification;
     }
+
+
+    public Pez(String classification) {
+        this.classification = classification;
+    }
+
 
     public String getclassification() {
         return classification;

@@ -5,10 +5,17 @@ public class Anfibio extends Animal {
     public Anfibio() {
     }
 
-    public Anfibio(int id, String name, String classification) {
-        super(id, name);
+    
+    public Anfibio(int id, String name, String stage, String classification) {
+        super(id, name, stage);
         this.classification = classification;
     }
+
+
+    public Anfibio(String classification) {
+        this.classification = classification;
+    }
+
 
     public String getClassification() {
         return classification;

@@ -2,15 +2,30 @@ public class Animal {
 
     private int id;
     private String name;
+    private String stage;
 
+ 
+ 
+    public Animal(int id, String name, String stage) {
+        this.id = id;
+        this.name = name;
+        this.stage = stage;
+    }
+    
+    
     public Animal() {
     }
 
-    public Animal(int id, String name) {
-        this.id = id;
-        this.name = name;
+    public String getStage() {
+        return stage;
     }
 
+    public void setStage(String stage) {
+        this.stage = stage;
+    }
+
+  
+   
     public int getId() {
         return id;
     }

@@ -5,10 +5,17 @@ public class Ave extends Animal {
     public Ave() {
     }
 
-    public Ave(int id, String name, String classification) {
-        super(id, name);
+   
+    public Ave(int id, String name, String stage, String classification) {
+        super(id, name, stage);
         this.classification = classification;
     }
+
+
+    public Ave(String classification) {
+        this.classification = classification;
+    }
+
 
     public String getclassification() {
         return classification;
