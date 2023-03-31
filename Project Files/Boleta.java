@@ -1,20 +1,35 @@
-import java.util.*;
+
 
 public class Boleta {
     private Cliente cliente;
     private double precioF;
     private Plan plan;
     private String fecha;
+    private double porcentajeDescuento = 0.2;
+    
+    
 
-    public Boleta(Cliente cliente, double precioF, Plan plan, String fecha) {
+    public Boleta(Cliente cliente, double precioF, Plan plan, String fecha, double porcentajeDescuento) {
         this.cliente = cliente;
         this.precioF = precioF;
         this.plan = plan;
         this.fecha = fecha;
+        this.porcentajeDescuento = porcentajeDescuento;
     }
+    
 
     public Boleta() {
     }
+
+
+    public double getPorcentajeDescuento() {
+        return porcentajeDescuento;
+    }
+
+    public void setPorcentajeDescuento(double porcentajeDescuento) {
+        this.porcentajeDescuento = porcentajeDescuento;
+    }
+
 
     public Cliente getCliente() {
         return cliente;
@@ -28,7 +43,7 @@ public class Boleta {
         return precioF;
     }
 
-    public void setPrecio(double precio) {
+    public void setPrecio(double precioF) {
         this.precioF = precioF;
     }
 
@@ -53,15 +68,19 @@ public class Boleta {
         String tipoCliente = cliente.getTipo();
 
         if (tipoCliente.equals("frecuente")) {
-            precio = precio - (precio * 0.2);
+            precioF = precio - (precio * porcentajeDescuento);
         }
-        return precio;
+        return precioF;
     }
+
 
     @Override
     public String toString() {
-        return "Boleta [cliente=" + cliente + ", precioF=" + precioF + ", plan=" + plan + ", fecha=" + fecha + "]";
+        return "Boleta [cliente=" + cliente + ", precioF=" + precioF + ", plan=" + plan + ", fecha=" + fecha
+                + ", porcentajeDescuento=" + porcentajeDescuento + "]";
     }
+
+  
 
     
 }
