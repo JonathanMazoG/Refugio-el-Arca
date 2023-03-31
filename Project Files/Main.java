@@ -1,8 +1,17 @@
+import java.util.ArrayList;
+
 public class Main {
     public static void main(String[] args) {
-        System.out.println("holaaaaaaaaaa");
+        ArrayList<Animal> animales = new ArrayList<Animal>() ;
+        ArrayList<Cliente> clientes = new ArrayList<Cliente>();
+        ArrayList<Boleta> boletas = new ArrayList<Boleta>();
+        ArrayList<Plan> planes = new ArrayList<Plan>();
+        ArrayList<Suministro> suministros = new ArrayList<Suministro>();
+        ArrayList<ReporteDeVentas> reportesDeVentas = new ArrayList<ReporteDeVentas>();
+        
     }
-}
+    }
+
 
 /*
 * Un zoológico famoso nos ha contratado para ayudarle en la administración del dinero y nos ha solicitado lo siguiente:

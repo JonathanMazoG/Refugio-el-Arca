@@ -14,10 +14,6 @@ import com.itextpdf.layout.element.Table;
 
 public class ReporteDeVentas {
 
-    Document document;
-    Table table;
-    Table table2;
-
     public static void CrearPdf()throws Exception {
         String destiny = "informe de ventas el Arca.pdf";       
         PdfWriter writer = new PdfWriter(destiny);
