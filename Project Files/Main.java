@@ -8,7 +8,9 @@ public class Main {
         ArrayList<Plan> planes = new ArrayList<Plan>();
         ArrayList<Suministro> suministros = new ArrayList<Suministro>();
         ArrayList<ReporteDeVentas> reportesDeVentas = new ArrayList<ReporteDeVentas>();
-        
+        Animal animal = new Anfibio(0, "sapitouno", "en rehabilitacion ", "anuros");
+        Administracion administracion = new Administracion();
+        administracion.ingresoAnimal(animal, animales);
     }
     }
 
