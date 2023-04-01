@@ -12,84 +12,47 @@ import com.itextpdf.text.Paragraph.*;
 import com.itextpdf.layout.element.Cell; 
 import com.itextpdf.layout.element.Table;
 
-public class ReporteDeVentas {
+public class ReporteDeVentas{  
 
-    public static void CrearPdf()throws Exception {
-        String destiny = "informe de ventas el Arca.pdf";       
-        PdfWriter writer = new PdfWriter(destiny);
-
-        PdfDocument pdf = new PdfDocument(writer);
-        Document document = new Document(pdf);
-    }
-    public static void CrearLogo(){  
-        String logoRefugio = "logo Refugio el Arca.jpg";       
-        ImageData logo = ImageDataFactory.create(logoRefugio); 
-        Image image = new Image(logo); 
-        
-        document.add(image);              
-        System.out.println("El logo se creo "); 
-    }
-    public static void Encabezados(){  
-         String texto = "Refugio de Animales el Arca";
-            Paragraph paragraph = new Paragraph(texto);
-            document.add(paragraph);
-
-         String texto1 = "Valle de San Nicolas Rionegro Antioquia Colombia";
-            Paragraph paragraph = new Paragraph(texto1);
-            document.add(paragraph);
-
-             String texto2 = "Pueden escribirnos al correo jonathan.mazog@udea.edu.co o tambien a asirley.hoyos@udea.edu.co ";
-            Paragraph paragraph = new Paragraph(texto2);
-            document.add(paragraph);
-    }
-
-    public static void InsertarTabla (){
-      //primera tabla
-     float [] pointColumnWidths1 = {150f, 150f, 150f, 150f, 150f, 150f};       
-      Table table = new Table(pointColumnWidths1);                             
-            
-      Cell cell1 = new Cell();       
-      cell1.add("Plan");       
-      table.addCell(cell1);             
-      
-      Cell cell2 = new Cell();       
-      cell2.add("Valor");       
-      table.addCell(cell2); 
-      
-      Cell cell3 = new Cell();       
-      cell3.add("Cantidad");       
-      table.addCell(cell3);             
-      
-      Cell cell4 = new Cell();       
-      cell4.add("Valor venta");       
-      table.addCell(cell4);        
-      
-      // tabla anidada
-      float [] pointColumnWidths2 = {150f, 150f};       
-      Table table2 = new Table(pointColumnWidths2); 
-
-      Cell cellt2_1 = new Cell();       
-      cellt2_1.add("porcentaje Descuento");       
-      table2.addCell(cellt2_1);
-      
-      Cell cellt2_2 = new Cell();       
-      cellt2_2.add ("Valor Descuento");     
-      table2.addCell(cellt2_2); 
-
-     Cell cell5 = new Cell();       
-      cell5.add(table2);       
-      table.addCell(cell5); 
-      
-     Cell cell6 = new Cell();       
-      cell6.add("Total");       
-      table.addCell(cell6);
-    }
-
-  }
-         
-
-      
-      
-
+public public static void addTitle(Document layoutDocument)()
+{
+    layoutDocument.add(new Paragraph("RETAIL INVOICE").setBold().setUnderline().setTextAlignment(TextAlignment.CENTER)); {
     
+  }
+}
+public static void CrearLogo(){  
+    String logoRefugio = "logo Refugio el Arca.jpg";       
+    ImageData logo = ImageDataFactory.create(logoRefugio); 
+    Image image = new Image(logo); 
+   }
+public static void addCustomerReference(Document layoutDocument) ()
+{
+    layoutDocument.add(new Paragraph("Refugio de Animales el Arca").setTextAlignment(TextAlignment.LEFT).setMultipliedLeading(0.2f));
+    layoutDocument.add(new Paragraph("Valle de San Nicolas Rionegro Antioquia Colombia").setMultipliedLeading(.2f));
+    layoutDocument.add(new Paragraph("Pueden escribirnos al correo jonathan.mazog@udea.edu.co o tambien a asirley.hoyos@udea.edu.co").setMultipliedLeading(.2f));
+}
 
+public void addTable(Document layoutDocument, ArrayList<Boleta> boleta)
+{
+    Table table = new Table(UnitValue.createPointArray(new float[]{60f, 180f, 50f, 80f, 110f}));
+
+    // headers
+    table.addCell(new Paragraph("Plan.").setBold());
+    table.addCell(new Paragraph("Cliente").setBold());
+    table.addCell(new Paragraph("fecha").setBold());
+    table.addCell(new Paragraph("Porcentaje de descuento").setBold());
+    table.addCell(new Paragraph("Precio final.").setBold());
+
+    // items
+    for(Boleta a : boleta)
+    {
+        table.addCell(new Paragraph(a.getPlan().getDescription()+""));
+        table.addCell(new Paragraph(a.getCliente().getName()));
+        table.addCell(new Paragraph(a.getFecha()+""));
+        table.addCell(new Paragraph(a.getPorcentajeDescuento()));
+        table.addCell(new Paragraph((a.getPrecio())+""));
+    }  
+    layoutDocument.add(table); 
+ }
+
+}

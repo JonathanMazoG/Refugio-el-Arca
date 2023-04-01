@@ -1,22 +1,25 @@
 
 
 public class Boleta {
-    private Cliente cliente;
-    private double precioF;
     private Plan plan;
+    private Cliente cliente;
     private String fecha;
-    private double porcentajeDescuento = 0.2;
+    private double porcentajeDescuento ;
+    private double precioF;
     
     
 
-    public Boleta(Cliente cliente, double precioF, Plan plan, String fecha, double porcentajeDescuento) {
-        this.cliente = cliente;
-        this.precioF = precioF;
+    
+    
+    
+    public Boleta(Plan plan, Cliente cliente, String fecha, double porcentajeDescuento, double precioF) {
         this.plan = plan;
+        this.cliente = cliente;
         this.fecha = fecha;
         this.porcentajeDescuento = porcentajeDescuento;
+        this.precioF = precioF;
     }
-    
+
 
     public Boleta() {
     }
@@ -69,6 +72,9 @@ public class Boleta {
 
         if (tipoCliente.equals("frecuente")) {
             precioF = precio - (precio * porcentajeDescuento);
+        }
+        else{ 
+            porcentajeDescuento = 0.0;
         }
         return precioF;
     }
