@@ -3,5 +3,6 @@
         "Project Files",
         "src/main/java/com/mycompany/zoo/el/arca"
     ],
-    "java.configuration.updateBuildConfiguration": "interactive"
+    "java.configuration.updateBuildConfiguration": "interactive",
+    "java.debug.settings.onBuildFailureProceed": true
 }
