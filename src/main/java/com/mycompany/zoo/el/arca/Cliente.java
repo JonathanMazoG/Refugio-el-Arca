@@ -1,5 +1,8 @@
 package com.mycompany.zoo.el.arca;
-public class Cliente {
+
+import javax.swing.ComboBoxModel;
+
+public class Cliente implements ComboBoxModel<Cliente> {
 
     private int id;
     private String name;

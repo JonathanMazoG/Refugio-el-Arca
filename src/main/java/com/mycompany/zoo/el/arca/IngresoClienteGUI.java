@@ -5,13 +5,13 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.ArrayList;
 
-public class AgregarClienteGUI extends JFrame {
+public class IngresoClienteGUI extends JFrame {
     
     private JTextField idField, nameField, ageField, tipoField, numVisitasField;
     private JButton addButton;
     private ArrayList<Cliente> clientes;
     
-    public AgregarClienteGUI(ArrayList<Cliente> clientes) {
+    public IngresoClienteGUI(ArrayList<Cliente> clientes) {
         this.clientes = clientes;
         
         // Configuración de la ventana principal

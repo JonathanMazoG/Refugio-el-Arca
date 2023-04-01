@@ -1,6 +1,8 @@
 package com.mycompany.zoo.el.arca;
 import java.util.ArrayList;
 
+import javax.swing.SwingUtilities;
+
 public class Main {
     public static void main(String[] args) {
         ArrayList<Animal> animales = new ArrayList<Animal>() ;
@@ -13,7 +15,7 @@ public class Main {
         Administracion administracion = new Administracion();
         administracion.ingresoAnimal(animal, animales);
         
-        AgregarClienteGUI agregarClienteGUI = new AgregarClienteGUI(clientes);
+        
         // El programa continuará ejecutándose hasta que se cierre la ventana de AgregarClienteGUI
         
         // Imprimir los arrays de la clase Administracion
@@ -41,6 +43,9 @@ public class Main {
         for (ReporteDeVentas r : reportesDeVentas) {
             System.out.println(r);
         }
+        //SwingUtilities.invokeLater(() -> new AgregarPlanGUI().setVisible(true));
+        //SwingUtilities.invokeLater(() -> new AgregarClienteGUI(clientes).setVisible(true));
+        SwingUtilities.invokeLater(() -> new MenuGUI().setVisible(true));
     }
 }
 

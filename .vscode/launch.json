@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "IngresoBoletaGUI",
+            "request": "launch",
+            "mainClass": "com.mycompany.zoo.el.arca.IngresoBoletaGUI",
+            "projectName": "zoo-el-arca"
+        },
+        {
+            "type": "java",
+            "name": "AgregarPlanGUI",
+            "request": "launch",
+            "mainClass": "com.mycompany.zoo.el.arca.AgregarPlanGUI",
+            "projectName": "zoo-el-arca"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "com.mycompany.zoo.el.arca.Main",
