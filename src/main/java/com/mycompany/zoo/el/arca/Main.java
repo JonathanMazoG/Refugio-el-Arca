@@ -12,8 +12,37 @@ public class Main {
         Animal animal = new Anfibio(0, "sapitouno", "en rehabilitacion ", "anuros");
         Administracion administracion = new Administracion();
         administracion.ingresoAnimal(animal, animales);
+        
+        AgregarClienteGUI agregarClienteGUI = new AgregarClienteGUI(clientes);
+        // El programa continuará ejecutándose hasta que se cierre la ventana de AgregarClienteGUI
+        
+        // Imprimir los arrays de la clase Administracion
+        System.out.println("Clientes:");
+        for (Cliente c : clientes) {
+            System.out.println(c);
+        }
+        System.out.println("Animales:");
+        for (Animal a : animales) {
+            System.out.println(a);
+        }
+        System.out.println("Boletas:");
+        for (Boleta b : boletas) {
+            System.out.println(b);
+        }
+        System.out.println("Planes:");
+        for (Plan p : planes) {
+            System.out.println(p);
+        }
+        System.out.println("Suministros:");
+        for (Suministro s : suministros) {
+            System.out.println(s);
+        }
+        System.out.println("Reportes de Ventas:");
+        for (ReporteDeVentas r : reportesDeVentas) {
+            System.out.println(r);
+        }
     }
-    }
+}
 
 
 /*

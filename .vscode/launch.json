@@ -6,6 +6,20 @@
     "configurations": [
         {
             "type": "java",
+            "name": "Main",
+            "request": "launch",
+            "mainClass": "com.mycompany.zoo.el.arca.Main",
+            "projectName": "zoo-el-arca"
+        },
+        {
+            "type": "java",
+            "name": "AgregarClienteGUI",
+            "request": "launch",
+            "mainClass": "com.mycompany.zoo.el.arca.AgregarClienteGUI",
+            "projectName": "zoo-el-arca"
+        },
+        {
+            "type": "java",
             "name": "prueba",
             "request": "launch",
             "mainClass": "com.mycompany.prueba",
