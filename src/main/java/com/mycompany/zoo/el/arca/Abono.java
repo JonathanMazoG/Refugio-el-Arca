@@ -1,3 +1,4 @@
+package com.mycompany.zoo.el.arca;
 public class Abono extends Plan{
 private double plannedprice;
 private double partialpayment;

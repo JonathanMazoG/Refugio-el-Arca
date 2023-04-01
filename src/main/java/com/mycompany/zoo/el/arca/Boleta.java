@@ -1,4 +1,4 @@
-
+package com.mycompany.zoo.el.arca;
 
 public class Boleta {
     private Cliente cliente;

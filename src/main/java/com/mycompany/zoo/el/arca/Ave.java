@@ -1,3 +1,5 @@
+package com.mycompany.zoo.el.arca;
+
 public class Ave extends Animal {
 
     private String classification;

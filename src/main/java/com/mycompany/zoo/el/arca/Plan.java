@@ -1,3 +1,4 @@
+package com.mycompany.zoo.el.arca;
 public abstract class Plan {
 
     private int numberOfSlots;

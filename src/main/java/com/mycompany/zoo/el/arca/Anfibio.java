@@ -1,3 +1,4 @@
+package com.mycompany.zoo.el.arca;
 public class Anfibio extends Animal {
 
     private String classification;

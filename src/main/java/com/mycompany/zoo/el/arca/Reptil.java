@@ -1,3 +1,4 @@
+package com.mycompany.zoo.el.arca;
 public class Reptil extends Animal {
 
     private String classification;

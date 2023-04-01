@@ -1,3 +1,4 @@
+package com.mycompany.zoo.el.arca;
 public class Suministro {
     private String name;
     private String dateOfPurchase;
