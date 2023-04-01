@@ -6,6 +6,13 @@
     "configurations": [
         {
             "type": "java",
+            "name": "AdministracionGUI",
+            "request": "launch",
+            "mainClass": "AdministracionGUI",
+            "projectName": "Refugio-el-Arca_4940cb4d"
+        },
+        {
+            "type": "java",
             "name": "Main",
             "request": "launch",
             "mainClass": "Main",
