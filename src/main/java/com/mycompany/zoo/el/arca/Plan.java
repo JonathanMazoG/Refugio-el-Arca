@@ -1,5 +1,5 @@
 package com.mycompany.zoo.el.arca;
-public abstract class Plan {
+public  class Plan {
 
     private int numberOfSlots;
     private String description;
@@ -13,6 +13,9 @@ public abstract class Plan {
         this.precio = precio;
     }
     
+    public Plan() {
+    }
+
     public int getNumberOfSlots() {
         return numberOfSlots;
     }
