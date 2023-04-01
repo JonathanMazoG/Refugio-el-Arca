@@ -55,21 +55,25 @@ public class ReporteDeVentas {
         // primera tabla
         float[] pointColumnWidths1 = { 150f, 150f, 150f, 150f, 150f, 150f };
         Table table = new Table(pointColumnWidths1);
-        
+
         Cell cell1 = new Cell();
-        cell1.add("Plan");
+        Paragraph paragraph1 = new Paragraph("Plan");
+        cell1.add(paragraph1);
         table.addCell(cell1);
 
         Cell cell2 = new Cell();
-        cell2.add("Valor");
+        Paragraph paragraph2 = new Paragraph("Valor");
+        cell2.add(paragraph2);
         table.addCell(cell2);
 
         Cell cell3 = new Cell();
-        cell3.add("Cantidad");
+        Paragraph paragraph3 = new Paragraph("Cantidad");
+        cell3.add(paragraph3);
         table.addCell(cell3);
 
         Cell cell4 = new Cell();
-        cell4.add("Valor venta");
+        Paragraph paragraph4 = new Paragraph("Valor venta");
+        cell4.add(paragraph4);
         table.addCell(cell4);
 
         // tabla anidada
@@ -77,11 +81,13 @@ public class ReporteDeVentas {
         Table table2 = new Table(pointColumnWidths2);
 
         Cell cellt2_1 = new Cell();
-        cellt2_1.add("porcentaje Descuento");
+        Paragraph paragraph5 = new Paragraph("porcentaje Descuento");
+        cellt2_1.add(paragraph5);
         table2.addCell(cellt2_1);
 
         Cell cellt2_2 = new Cell();
-        cellt2_2.add("Valor Descuento");
+        Paragraph paragraph6 = new Paragraph("Valor Descuento");
+        cellt2_2.add(paragraph6);
         table2.addCell(cellt2_2);
 
         Cell cell5 = new Cell();
@@ -89,7 +95,8 @@ public class ReporteDeVentas {
         table.addCell(cell5);
 
         Cell cell6 = new Cell();
-        cell6.add("Total");
+        Paragraph paragraph7 = new Paragraph("Total");
+        cell6.add(paragraph7);
         table.addCell(cell6);
 
         document.add(table);
