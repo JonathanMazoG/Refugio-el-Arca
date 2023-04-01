@@ -1,11 +1,8 @@
 import java.util.ArrayList;
 
 
-public class Administracion{  
-
-  public Administracion() {
-    }
-
+public class Administracion {
+    
     public ArrayList<Cliente> ingresoCliente(Cliente cliente,ArrayList<Cliente> clientes){
         if(cliente.getNumVisitas()>=10){
             cliente.setTipo("Frecuente");
@@ -14,7 +11,6 @@ public class Administracion{
         clientes.add(cliente);
         return clientes;
     }
-
 
     public ArrayList<Animal> ingresoAnimal(Animal animal,ArrayList<Animal> animales){
         animales.add(animal);
@@ -40,11 +36,12 @@ public class Administracion{
         return reportesDeVentas;
     }
     
-    public String liberacionAnimal(Animal animal){
-        String mensaje = "";
-       if(animal.getStage().equals("rehabilitado")){
-        mensaje = "el animal está listo para ser liberado en su habitad natural";
-      }
-      return mensaje;
+    public String liberacionAnimal(Animal animal){ 
+       String mensaje = "";
+      if(animal.getStage().equals("rehabilitado")){
+       mensaje = "Este animal está listo para ser liberado en su habitad natural";
+       }
+       return mensaje;
     }
+    
 }
