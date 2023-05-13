@@ -1,8 +1,9 @@
 package com.mycompany.zoo.el.arca;
 
-import javax.swing.ComboBoxModel;
 
-public class Cliente implements ComboBoxModel<Cliente> {
+
+
+public class Cliente  {
 
     private int id;
     private String name;
@@ -62,6 +63,6 @@ public class Cliente implements ComboBoxModel<Cliente> {
     @Override
     public String toString() {
         return "Cliente{" + "id=" + id + ", name='" + name +  ", age='" + age + '\'' + '}';
-    }
-   
-}
+   }
+
+ }

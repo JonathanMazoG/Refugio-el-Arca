@@ -3,6 +3,7 @@ import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
 import java.awt.event.ActionListener;
+import java.util.ArrayList;
 
 public class IngresoSuministroGUI extends JFrame {
 
@@ -20,6 +21,9 @@ public class IngresoSuministroGUI extends JFrame {
         setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         initComponents();
         setVisible(true);
+    }
+
+    public IngresoSuministroGUI(ArrayList<Suministro> suministros2) {
     }
 
     private void initComponents() {

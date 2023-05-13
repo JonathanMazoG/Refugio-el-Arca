@@ -71,13 +71,9 @@ public class AgregarPlanGUI extends JFrame {
                     String tipoAnimal = tipoAnimalField.getText();
                     double precio = Double.parseDouble(precioField.getText());
 
-                    Plan plan = new Plan(numberOfSlots, description, tipoAnimal, precio) {
-                        @Override
-                        public double calcularCosto() {
-                            // Implementar el cálculo del costo del plan
-                            return 0;
-                        }
-                    };
+                    Plan plan = new Plan(numberOfSlots, description, tipoAnimal, precio);
+                        
+                
 
                     // Agregar el plan a la base de datos o a la lista de planes
                     // ...

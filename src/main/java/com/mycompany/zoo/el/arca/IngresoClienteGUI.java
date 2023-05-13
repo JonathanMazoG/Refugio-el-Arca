@@ -6,8 +6,7 @@ import java.awt.event.*;
 import java.util.ArrayList;
 
 public class IngresoClienteGUI extends JFrame {
-    
-    private JTextField idField, nameField, ageField, tipoField, numVisitasField;
+   private JTextField idField, nameField, ageField, tipoField, numVisitasField;
     private JButton addButton;
     private ArrayList<Cliente> clientes;
     

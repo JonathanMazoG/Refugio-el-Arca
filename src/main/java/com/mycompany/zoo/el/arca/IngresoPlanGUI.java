@@ -3,6 +3,7 @@ package com.mycompany.zoo.el.arca;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class IngresoPlanGUI extends JFrame {
     private JTextField numberOfSlotsField;
@@ -68,4 +69,7 @@ public class IngresoPlanGUI extends JFrame {
 
         setVisible(true);
     }
+    public IngresoPlanGUI(ArrayList<Plan> planes) {
+    }
+  
 }

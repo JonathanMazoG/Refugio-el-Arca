@@ -1,5 +1,5 @@
 package com.mycompany.zoo.el.arca;
-public  class Plan {
+public  class  Plan {
 
     private int numberOfSlots;
     private String description;
@@ -53,5 +53,5 @@ public  class Plan {
         return "Plan{" + "description=" + description + ", numberOfSlots='" + numberOfSlots + ", tipoAnimal='" + tipoAnimal  +'\'' + '}';
     }
     
-    public abstract double calcularCosto();
-};
+    
+}

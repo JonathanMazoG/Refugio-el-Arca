@@ -43,8 +43,8 @@ public class Main {
         for (ReporteDeVentas r : reportesDeVentas) {
             System.out.println(r);
         }
-        //SwingUtilities.invokeLater(() -> new AgregarPlanGUI().setVisible(true));
-        //SwingUtilities.invokeLater(() -> new AgregarClienteGUI(clientes).setVisible(true));
+        SwingUtilities.invokeLater(() -> new AgregarPlanGUI().setVisible(true));
+      // SwingUtilities.invokeLater(() -> new AgregarClienteGUI(clientes).setVisible(true));
         SwingUtilities.invokeLater(() -> new MenuGUI().setVisible(true));
     }
 }

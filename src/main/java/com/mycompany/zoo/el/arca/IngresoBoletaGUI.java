@@ -3,13 +3,14 @@ package com.mycompany.zoo.el.arca;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class IngresoBoletaGUI extends JFrame {
     private JLabel clienteLabel, precioLabel, planLabel, fechaLabel, descuentoLabel;
     private JTextField clienteText, precioText, planText, fechaText, descuentoText;
     private JButton ingresarButton;
     
-    public IngresoBoletaGUI() {
+    public IngresoBoletaGUI(ArrayList<Boleta> boletas, ArrayList<Cliente> clientes, ArrayList<Animal> animales) {
         // Configurar la ventana
         setTitle("Ingresar Boleta");
         setSize(400, 250);
@@ -82,8 +83,8 @@ public class IngresoBoletaGUI extends JFrame {
         fechaText.setText("");
         descuentoText.setText("");
     }
-    
+  
     public static void main(String[] args) {
-        IngresoBoletaGUI gui = new IngresoBoletaGUI();
+        IngresoBoletaGUI gui = new IngresoBoletaGUI(null, null, null);
     }
-}
+  }
