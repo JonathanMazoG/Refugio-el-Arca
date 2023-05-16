@@ -14,18 +14,18 @@ import com.itextpdf.layout.element.Table;
 
 public class ReporteDeVentas{  
 
-public public static void addTitle(Document layoutDocument)()
+public static void addTitle(Document layoutDocument)
 {
     layoutDocument.add(new Paragraph("RETAIL INVOICE").setBold().setUnderline().setTextAlignment(TextAlignment.CENTER)); {
-    
   }
+  
 }
 public static void CrearLogo(){  
     String logoRefugio = "logo Refugio el Arca.jpg";       
     ImageData logo = ImageDataFactory.create(logoRefugio); 
     Image image = new Image(logo); 
    }
-public static void addCustomerReference(Document layoutDocument) ()
+public static void addCustomerReference(Document layoutDocument) 
 {
     layoutDocument.add(new Paragraph("Refugio de Animales el Arca").setTextAlignment(TextAlignment.LEFT).setMultipliedLeading(0.2f));
     layoutDocument.add(new Paragraph("Valle de San Nicolas Rionegro Antioquia Colombia").setMultipliedLeading(.2f));
@@ -56,3 +56,4 @@ public void addTable(Document layoutDocument, ArrayList<Boleta> boleta)
  }
 
 }
+ 

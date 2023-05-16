@@ -14,6 +14,9 @@ public class Main {
         Animal animal = new Anfibio(0, "sapitouno", "en rehabilitacion ", "anuros");
         Administracion administracion = new Administracion();
         administracion.ingresoAnimal(animal, animales);
+
+        
+
         
         
         // El programa continuará ejecutándose hasta que se cierre la ventana de AgregarClienteGUI
@@ -44,7 +47,6 @@ public class Main {
             System.out.println(r);
         }
         SwingUtilities.invokeLater(() -> new AgregarPlanGUI().setVisible(true));
-      // SwingUtilities.invokeLater(() -> new AgregarClienteGUI(clientes).setVisible(true));
         SwingUtilities.invokeLater(() -> new MenuGUI().setVisible(true));
     }
 }
