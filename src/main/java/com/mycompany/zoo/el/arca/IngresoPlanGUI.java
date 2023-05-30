@@ -13,6 +13,8 @@ public class IngresoPlanGUI extends JFrame {
     private JButton submitButton;
     private JLabel messageLabel;
     private Boleta[] boletas;
+    private ArrayList<Plan> planList;
+
 
     public IngresoPlanGUI(Boleta[] boletas) {
         this.boletas = boletas;
@@ -54,6 +56,7 @@ public class IngresoPlanGUI extends JFrame {
                     int numberOfSlots = Integer.parseInt(numberOfSlotsString);
                     double precio = Double.parseDouble(precioString);
                     Plan plan = new Plan(numberOfSlots, description, tipoAnimal, precio);
+                    planList.add(plan);
                     // Agregar el plan a la lista de planes del programa
                     // y mostrar un mensaje de éxito en la interfaz
                     messageLabel.setText("Plan ingresado exitosamente");

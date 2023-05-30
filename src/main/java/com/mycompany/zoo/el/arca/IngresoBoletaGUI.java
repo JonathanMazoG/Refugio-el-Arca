@@ -9,6 +9,8 @@ public class IngresoBoletaGUI extends JFrame {
     private JLabel clienteLabel, precioLabel, planLabel, fechaLabel, descuentoLabel;
     private JTextField clienteText, precioText, planText, fechaText, descuentoText;
     private JButton ingresarButton;
+    private ArrayList<Boleta> boletaList;
+
     
     public IngresoBoletaGUI(ArrayList<Boleta> boletas, ArrayList<Cliente> clientes, ArrayList<Animal> animales) {
         // Configurar la ventana
@@ -66,12 +68,14 @@ public class IngresoBoletaGUI extends JFrame {
         
         // Crear la boleta con los datos ingresados
         Cliente c = new Cliente();
+        cliente = c.getName();
         Plan p = new Plan();
+        plan = p.getDescription();
         Boleta b = new Boleta(c, precio, p, fecha, descuento);
         
         // Agregar la boleta al array de boletas
         // (asumiendo que el array es un parámetro de la interfaz)
-        // boletas.add(b);
+         boletaList.add(b);
         
         // Mostrar un mensaje de éxito
         JOptionPane.showMessageDialog(this, "Boleta ingresada con éxito.");

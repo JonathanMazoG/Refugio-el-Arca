@@ -32,11 +32,12 @@ public class Administracion {
         return suministros ;
     }
 
+
     public ArrayList<ReporteDeVentas> ingresoinforme(ReporteDeVentas reporteDeVentas,ArrayList<ReporteDeVentas> reportesDeVentas){
         reportesDeVentas.add(reporteDeVentas);
         return reportesDeVentas;
     }
-    
+
     public String liberacionAnimal(Animal animal){ 
        String mensaje = "";
       if(animal.getStage().equals("rehabilitado")){

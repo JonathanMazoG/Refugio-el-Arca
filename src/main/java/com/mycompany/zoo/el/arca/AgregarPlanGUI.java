@@ -2,6 +2,7 @@ package com.mycompany.zoo.el.arca;
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.*;
+import java.util.ArrayList;
 
 public class AgregarPlanGUI extends JFrame {
 
@@ -10,6 +11,7 @@ public class AgregarPlanGUI extends JFrame {
     private JTextField tipoAnimalField;
     private JTextField precioField;
     private JButton agregarButton;
+    private ArrayList<Plan> planList;
 
     public AgregarPlanGUI() {
         initComponents();
@@ -72,7 +74,7 @@ public class AgregarPlanGUI extends JFrame {
                     double precio = Double.parseDouble(precioField.getText());
 
                     Plan plan = new Plan(numberOfSlots, description, tipoAnimal, precio);
-                        
+                    //planList.add(plan);   
                 
 
                     // Agregar el plan a la base de datos o a la lista de planes
